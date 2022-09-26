@@ -24,6 +24,9 @@ const App = () => {
     setHistory(history.concat('N'))
   }
 
+  const average = (good - bad) / history.length;
+  const positive_percentage = (good / history.length) * 100;
+
   return (
     <div>
       <button onClick= { handleGoodClick } > good
@@ -36,7 +39,9 @@ const App = () => {
       <p>Good: {good} </p>
       <p>Neutral: {neutral} </p>
       <p>Bad: {bad} </p>
+      <p>Average : {average} </p>
       <p>history: {history.reverse()} </p>
+      <p>Positive : {positive_percentage} %</p>
     </div>
   )
 }
